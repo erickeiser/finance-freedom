@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e1f2fe 100%);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5d5e6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a3b8cc;
+}
+
+/* DatePicker customization */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker {
+  @apply shadow-lg border-gray-200 rounded-lg font-sans;
+}
+
+.react-datepicker__header {
+  @apply bg-gray-50 border-gray-200;
+}
+
+.react-datepicker__current-month {
+  @apply text-gray-700 font-semibold;
+}
+
+.react-datepicker__day {
+  @apply text-gray-700 hover:bg-blue-50 rounded-md;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-blue-500 text-white hover:bg-blue-600;
+}
+
+.react-datepicker__day--keyboard-selected {
+  @apply bg-blue-100 text-blue-900;
+}
+
+/* Drag and drop styles */
+.expense-dragging {
+  @apply shadow-lg ring-2 ring-blue-500 bg-white opacity-90 cursor-grabbing;
+  transform: scale(1.02);
+  transition: transform 0.2s ease;
+}
+
+.expense-draggable {
+  @apply cursor-grab;
+}
+
+.expense-draggable:active {
+  @apply cursor-grabbing;
+}
+
+.droppable-active {
+  @apply ring-2 ring-blue-200 bg-blue-50/50;
+}
+
+.droppable-over {
+  @apply ring-2 ring-blue-400 bg-blue-100/50;
+}
